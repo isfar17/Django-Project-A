@@ -1,0 +1,15 @@
+{%extends 'first/home.html' %}
+
+{% block title %}Form{% endblock %}
+
+
+{%block body%}<p>Please Fill Out The Form Below!!</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <p>{{form.as_p}}</p>
+    <button type="submit" class="btn btn-outline-success">Submit</button>
+</form>
+
+
+{%endblock body%}

@@ -1,0 +1,19 @@
+{%extends 'first/home.html' %}
+
+{% block title %}Datashow{% endblock %}
+
+{%block body%}
+<p>This is the Datashow page.Here I have retrieved data from database</p>
+{%if data%}
+    {%for d in data%}
+    <p>user :</p>
+    <ol>
+        <li>{{d.firstname}}</li>
+        <li>{{d.lastname}}</li>
+        <li>{{d.email}}</li>
+    </ol>
+    {%endfor%}
+
+{%endif%}
+
+{%endblock body%}
